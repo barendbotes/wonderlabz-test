@@ -21,7 +21,6 @@ services:
       - "traefik.http.services.wonderlabz-service.loadbalancer.passhostheader=true"
       - "traefik.http.services.wonderlabz-service.loadbalancer.server.port=80"
       - "traefik.http.services.wonderlabz-service.loadbalancer.server.scheme=http"
-      - "traefik.http.routers.wonderlabz.tls=true"
       - "traefik.http.routers.wonderlabz.middlewares=public-chain@file"
 
   php-fpm:
