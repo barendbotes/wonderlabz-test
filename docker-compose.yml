@@ -6,9 +6,9 @@ services:
     ports:
       - 8181:80
     volumes:
-      - ./html:/var/www/html
-      - ./conf:/etc/nginx/templates
+      - ./src/html:/var/www/html
+      - ./src/conf:/etc/nginx/templates
   php-fpm:
     image: php:8-fpm
     volumes:
-      - ./html:/var/www/html
+      - ./src/html:/var/www/html
