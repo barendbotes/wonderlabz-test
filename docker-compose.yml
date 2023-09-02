@@ -5,6 +5,7 @@ services:
       context: .
     networks:
       - proxy
+      - internal
     ports:
       - 8181:80
     volumes:
