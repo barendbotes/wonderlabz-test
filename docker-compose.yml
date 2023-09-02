@@ -24,7 +24,7 @@ services:
       - "traefik.http.routers.wonderlabz.middlewares=public-chain@file"
 
   php-fpm:
-    image: php:8-fpm
+    image: php:7.4-fpm
     volumes:
       - ./src/html:/var/www/html
     networks:
