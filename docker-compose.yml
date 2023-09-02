@@ -15,6 +15,8 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=proxy"
       - "traefik.http.routers.wonderlabz.entrypoints=https"
+      - "traefik.http.routers.wonderlabz.tls=true"
+      - "traefik.http.routers.wonderlabz.tls.certresolver=cloudflare"
       - "traefik.http.routers.wonderlabz.rule=Host(`wonderlabz.botes.family`)"
       - "traefik.http.services.wonderlabz-service.loadbalancer.passhostheader=true"
       - "traefik.http.services.wonderlabz-service.loadbalancer.server.port=80"
