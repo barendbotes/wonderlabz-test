@@ -1,0 +1,14 @@
+version: "3.6"
+services:
+  wonderlabz:
+    build:
+      context: .
+    ports:
+      - 8181:80
+    volumes:
+      - ./html:/var/www/html
+      - ./conf:/etc/nginx/templates
+  php-fpm:
+    image: php:8-fpm
+    volumes:
+      - ./html:/var/www/html
